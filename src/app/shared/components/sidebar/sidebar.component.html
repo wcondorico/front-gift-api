@@ -1,0 +1,34 @@
+<div class="bg-slate-800 p-8 h-full">
+  <div class="mb-10">
+    <p class="text-white text-4xl">GifsApp</p>
+  </div>
+  <div>
+    @for (search of listSearch; track search) {
+    <div class="relative">
+      <button
+        class="bg-slate-50 py-1 px-2 w-full text-center rounded-md mb-6 hover:bg-slate-200"
+        (click)="searchButton(search)"
+      >
+        {{ search }}
+      </button>
+      <span class="absolute right-0 top-0 text-sky-600 h-8 w-8 flex justify-center items-center hover:bg-slate-200 rounded-md cursor-pointer"
+      (click)="deleteSearch(search)">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 23 23"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15 12H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+          />
+        </svg>
+      </span>
+    </div>
+    }
+  </div>
+</div>

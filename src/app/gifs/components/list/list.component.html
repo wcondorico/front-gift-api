@@ -1,0 +1,13 @@
+<div class="p-14">
+  <div class="flex flex-wrap gap-5">
+    
+    @for (item of gifList; track item.id) {
+      <app-gifs-card 
+      [item]="item"
+      ></app-gifs-card>
+    }
+
+    
+
+  </div>
+</div>
